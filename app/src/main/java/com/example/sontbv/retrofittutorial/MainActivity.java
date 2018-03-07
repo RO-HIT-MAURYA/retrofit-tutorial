@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(moviesAdapter);
 
         getMovies();
-
-
     }
 
     private void getMovies(){
@@ -55,13 +53,10 @@ public class MainActivity extends AppCompatActivity {
                     Log.e(TAG, response.message());
                 }
             }
-
             @Override
             public void onFailure(Call<List<Movie>> call, Throwable t) {
                 Log.e(TAG, t.getMessage());
             }
         });
-
     }
-
 }
